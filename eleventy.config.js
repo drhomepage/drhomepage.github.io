@@ -7,6 +7,7 @@ import virtual from '@rollup/plugin-virtual'
 import terser from '@rollup/plugin-terser'
 import { EleventyI18nPlugin } from '@11ty/eleventy'
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img'
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
 
 /**
  * @typedef {Object} Page
@@ -22,6 +23,7 @@ export default function (eleventyConfig) {
     domDiff: false,
   })
   eleventyConfig.addPlugin(pluginWebc)
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
   eleventyConfig.addPassthroughCopy('favicon.ico')
   eleventyConfig.addPassthroughCopy('robots.txt')
   eleventyConfig.addPassthroughCopy('assets')
