@@ -10,7 +10,7 @@
     "watch": "rm -rf _site && npm run watch:11ty && npm run watch:tailwind",
     "watch:11ty": "npx @11ty/eleventy --serve",
     "watch:tailwind": "npx @tailwindcss/cli -i ./src/style.css -o ./assets/style.css --watch",
-    "build": "rm -rf _site && npm run build:tailwind && npm run build:11ty",
+    "build": "rm -rf _site/* && touch _site/.keep && npm run build:tailwind && npm run build:11ty",
     "build:11ty": "npx @11ty/eleventy",
     "build:tailwind": "npx @tailwindcss/cli -i ./src/style.css -o ./assets/style.css --minify"
   },

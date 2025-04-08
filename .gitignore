@@ -1,4 +1,5 @@
-_site
+_site/*
+!_site/.keep
 assets/style.css
 node_modules
 admin
