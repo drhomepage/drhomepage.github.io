@@ -31,5 +31,10 @@
   "devDependencies": {
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11"
+  },
+  "optionalDependencies": {
+    "@parcel/watcher-linux-x64-glibc": "^2.5.1",
+    "@rollup/rollup-linux-x64-gnu": "^4.39.0",
+    "@tailwindcss/oxide-linux-x64-gnu": "^4.1.3"
   }
 }
