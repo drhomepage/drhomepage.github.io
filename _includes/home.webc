@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<script>
+  import LitGreeter from 'src/components/lit-greeter.js'
+</script>
+<link rel="stylesheet" href="../assets/style.css" />
+
+<html :lang="page.lang">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>digital rapids</title>
+    <link rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep />
+    <script type="module" :src="getBundleFileUrl('js')" webc:keep></script>
+  </head>
+
+  <body>
+    <lit-greeter name="Felix"></lit-greeter>
+    <h1
+      class="text-4xl font-bold text-red-50"
+      @text="dr18(page.welcome, 'Jasper')"
+    ></h1>
+  </body>
+</html>
