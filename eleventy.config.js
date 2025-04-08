@@ -24,7 +24,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginWebc)
   eleventyConfig.addPassthroughCopy('favicon.ico')
   eleventyConfig.addPassthroughCopy('robots.txt')
-  eleventyConfig.addPassthroughCopy('assets/style.css')
+  eleventyConfig.addPassthroughCopy('assets')
 
   eleventyConfig.addPlugin(bundlerPlugin, {
     transforms: [
