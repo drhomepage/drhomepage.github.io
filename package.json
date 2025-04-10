@@ -11,7 +11,7 @@
     "watch:11ty": "npx @11ty/eleventy --serve",
     "watch:tailwind": "npx @tailwindcss/cli -i ./src/style.css -o ./assets/style.css --watch",
     "build": "rm -rf _site && npm run build:tailwind && npm run build:11ty",
-    "build:11ty": "npx @11ty/eleventy --pathprefix=dr-decap",
+    "build:11ty": "npx @11ty/eleventy",
     "build:tailwind": "npx @tailwindcss/cli -i ./src/style.css -o ./assets/style.css --minify"
   },
   "dependencies": {
