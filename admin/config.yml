@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: digitalrapids/dr-decap
+  branch: main
+
+media_folder: 'admin/assets/images'
+public_folder: 'assets/images'
+
+collections:
+  - name: 'page'
+    label: 'Page Content'
+    files:
+      - name: 'page'
+        label: 'Page Translations'
+        file: '_data/page.yml'
+        fields:
+          - label: 'Translations'
+            name: 'translations'
+            widget: 'object'
+            collapsed: false
+            fields:
+              - label: 'Key'
+                name: 'key'
+                widget: 'string'
+              - label: 'English'
+                name: 'en'
+                widget: 'string'
+              - label: 'German'
+                name: 'de'
+                widget: 'string'

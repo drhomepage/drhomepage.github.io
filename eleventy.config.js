@@ -27,6 +27,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
   eleventyConfig.addPassthroughCopy('favicon.ico')
   eleventyConfig.addPassthroughCopy('robots.txt')
+  eleventyConfig.addPassthroughCopy('admin')
   eleventyConfig.addPassthroughCopy('assets')
 
   eleventyConfig.addPlugin(bundlerPlugin, {
