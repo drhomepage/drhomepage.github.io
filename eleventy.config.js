@@ -12,7 +12,8 @@ import yaml from 'js-yaml'
 
 /**
  * @typedef {Object} Page
- * @property {string} lang
+ * @property {'de'|'en'} lang
+ * @property {Array<{key: string, en: string, de: string}>} translations
  *
  * @typedef {Object} FilterContext
  * @property {Page} page
@@ -65,12 +66,16 @@ export default function (eleventyConfig) {
   })
 
   /**
-   * @param {Object.<string, string>|string} dict
+   * @param {string} translationKey
    * @param {Object|any} params
    * @this {FilterContext}
    * @returns {string}
    */
-  function dr18(dict, params) {
+  function dr18(translationKey, params) {
+    const dict = this.page.translations.find((p) => p.key === translationKey)
+    if (!dict) {
+      return `missing translation for ${translationKey}`
+    }
     if (typeof dict === 'string') return dict
     const v = dict[this.page.lang]
     if (typeof v === 'string' && params && typeof params === 'object') {

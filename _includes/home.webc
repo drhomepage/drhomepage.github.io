@@ -17,7 +17,7 @@
     <lit-greeter name="Felix"></lit-greeter>
     <h1
       class="text-4xl font-bold text-red-50"
-      @text="dr18(page.welcome, { name: 'Jasper' })"
+      @text="dr18('welcome', { name: 'Felix' })"
     ></h1>
   </body>
 </html>

@@ -1,6 +1,4 @@
-welcome:
-  en: Welcome to digital rapids, {name}
-  de: Willkommen bei digital rapids, {name}
-key: test
-en: yolo
-de: jo jo
+translations:
+  - key: welcome
+    en: Welcome to digital rapids, {name}
+    de: Willkommen bei digital rapids, {name}
