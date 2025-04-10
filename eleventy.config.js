@@ -8,6 +8,7 @@ import terser from '@rollup/plugin-terser'
 import { EleventyI18nPlugin } from '@11ty/eleventy'
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img'
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
+import yaml from 'js-yaml'
 
 /**
  * @typedef {Object} Page
@@ -63,16 +64,16 @@ export default function (eleventyConfig) {
   })
 
   /**
-   * @param {Object.<string, string|Function>|string} obj
-   * @param {any[]} args
+   * @param {Object.<string, string>|string} dict
+   * @param {Object|any} params
    * @this {FilterContext}
    * @returns {string}
    */
-  function dr18(obj, ...args) {
-    if (typeof obj === 'string') return obj
-    const v = obj[this.page.lang]
-    if (typeof v === 'function') {
-      return v(...args)
+  function dr18(dict, params) {
+    if (typeof dict === 'string') return dict
+    const v = dict[this.page.lang]
+    if (typeof v === 'string' && params && typeof params === 'object') {
+      return v.replace(/\{(\w+)\}/g, (match, key) => params[key] || '')
     }
     return v
   }
@@ -117,4 +118,8 @@ export default function (eleventyConfig) {
       decoding: 'async',
     },
   })
+
+  eleventyConfig.addDataExtension('yml', (/** @type {string} */ contents) =>
+    yaml.load(contents),
+  )
 }
