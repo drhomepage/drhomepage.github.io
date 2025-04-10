@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: digitalrapids/dr-decap
+  repo: drhomepage/drhomepage.github.io
   branch: main
 
 media_folder: 'admin/assets/images'
@@ -14,17 +14,12 @@ collections:
         label: 'Page Translations'
         file: '_data/page.yml'
         fields:
-          - label: 'Translations'
-            name: 'translations'
-            widget: 'object'
-            collapsed: false
-            fields:
-              - label: 'Key'
-                name: 'key'
-                widget: 'string'
-              - label: 'English'
-                name: 'en'
-                widget: 'string'
-              - label: 'German'
-                name: 'de'
-                widget: 'string'
+          - label: 'Key'
+            name: 'key'
+            widget: 'string'
+          - label: 'English'
+            name: 'en'
+            widget: 'string'
+          - label: 'German'
+            name: 'de'
+            widget: 'string'
