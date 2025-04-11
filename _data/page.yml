@@ -1,4 +1,4 @@
 translations:
   - key: welcome
-    en: Welcome to digital rapids, {name}
-    de: Willkommen bei digital rapids, {name}
+    en: A warm welcome to digital rapids, {name}
+    de: Herzlich willkommen bei digital rapids, {name}
