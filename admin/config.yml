@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: drhomepage/drhomepage.github.io
+  base_url: https://oauth.digitalrapids.work
   branch: main
 
 media_folder: 'admin/assets/images'
